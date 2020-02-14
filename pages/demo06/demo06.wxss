@@ -1,0 +1,7 @@
+/* pages/demo06/demo06.wxss */
+/* 
+1、样式引入 
+使用@import来引入 路径只能写相对路径  
+*/
+
+@import "../../stylexs/common.wxss"

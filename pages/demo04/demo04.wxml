@@ -1,0 +1,19 @@
+<!--
+简单的双向绑定
+需要给input标签绑定 input事件 绑定关键字 bindinput
+e.detail.value 在js中获取值
+把输入的值赋值到data当中
+但是不能这样写：this.data.num=e.detail.value
+正确的写法是
+this.setData({
+    num:e.detail.value
+})
+加入点击事件 bindtap 
+通过自定义属性来传递参数 最后在事件元中获取自定义属性
+-->
+<input type="text" bindinput="handelInput"/>
+<button bindtap="handelPlas" data-operation="{{1}}">+</button>
+<button bindtap="handelPlas"  data-operation="{{-1}}">-</button>
+<view class="" hover-class="none" hover-stop-propagation="false">
+    {{num}}
+</view>

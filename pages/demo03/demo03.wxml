@@ -1,0 +1,87 @@
+<!-- pages/demo03/demo03.wxml -->
+<view class="" hover-class="none" hover-stop-propagation="false">{{msg}}</view>
+<view class="" hover-class="none" hover-stop-propagation="false">{{num}}</view>
+<view class="" hover-class="none" hover-stop-propagation="false">{{false}}</view>
+<view class="" hover-class="none" hover-stop-propagation="false">{{person.age}}</view>
+<view class="" hover-class="none" hover-stop-propagation="false">{{person.name}}</view>
+<view data-num="{{num}}">data-num</view>
+<!-- 注意空格 -->
+<view class="" hover-class="none" hover-stop-propagation="false">
+    <checkbox checked="{{true}}"></checkbox>
+    <checkbox checked="{{isChecked}}"></checkbox>
+</view>
+<!-- 运算=表达式
+1、加入比较简单的表达式 -->
+<view class="" hover-class="none" hover-stop-propagation="false">
+    {{1+1}}
+
+     {{"1"+"1"}}
+
+     {{10%2===0?"偶数":"计数"}}
+</view>
+<!-- 1、wx:for="{{数组和对象}}" wx：for-item="{{循环项的名称}}" wx：for-index="循环项的索引"
+2、wx:key="唯一的值" 用来提高列表渲染的性能，wx：key是循环数据中唯一的属性
+3、wx:key="*this" 就表示你的数组是个普通的数组， *this 表示是循环项 比如这种的数组 [1,2,6,88] 
+4、当出现数组的嵌套循环的时候，注意绑定的名称不要重名
+5、默认不写 wx:for-item="item" wx:for-index="index" 的话 也可以使用 item 和index ，这就是说只有一层的循环的时候，就不用写
+6、对象循环
+    wx:for="{{对象}}" wx:for-item="对象的值" wx:for-index="对象的属性"
+    所以最好改成这样：wx:for-item="value" wx:for-index="key" 这样不会弄糊涂了 -->
+<view class="" hover-class="none" hover-stop-propagation="false">
+    <view wx:key="0" wx:for="{{lists}}" wx:for-item="item" wx:for-index="index" class="" hover-class="none" hover-stop-propagation="false">
+        索引：{{index}}
+         值：{{item.name}}
+    </view>
+</view>
+<view class="" hover-class="none" hover-stop-propagation="false">
+    <view>对象循环</view>
+    <view wx:for="{{person}}" wx:for-item="value" wx:for-index="key" wx:key="age">
+        属性 :{{value}}
+      值 :{{key}}
+    </view>
+</view>
+<!-- block 
+ 1、占位符标签 写代码的时候，可以看见这个标签，但是页面渲染的时候，小程序会把它移除掉 -->
+<view class="" hover-class="none" hover-stop-propagation="false">block</view>
+<view class="" hover-class="none" hover-stop-propagation="false">
+    <view wx:for="{{lists}}" wx:key="id" class="" hover-class="none" hover-stop-propagation="false">
+        索引 :{{index}}
+          值 ：{{item.name}}
+    </view>
+    <text class="" selectable="false" space="false" decode="false">block 标签就是站位标签</text>
+    <block wx:for="{{lists}}">索引 :{{index}}
+          值 ：{{item.name}}</block>
+</view>
+<!-- 条件渲染
+1、wx:if="{{true/false}}"
+2、wx:elisf 
+3、wx：else-->
+<view class="" hover-class="none" hover-stop-propagation="false">
+    条件渲染
+    <view wx:if="{{true}}" class="" hover-class="none" hover-stop-propagation="false">显示</view>
+    <view wx:if="{{false}}" class="" hover-class="none" hover-stop-propagation="false">隐藏</view>
+    
+    <text class="" selectable="false" space="false" decode="false">
+        多重的判断的格式 
+    </text>
+      
+    <view wx:if="{{flase}}" class="" hover-class="none" hover-stop-propagation="false">不显示</view>
+    <view wx:elif="{{flase}}" class="" hover-class="none" hover-stop-propagation="false">不显示</view>
+    <view wx:else class="" hover-class="none" hover-stop-propagation="false">只有能显示</view>
+</view>
+
+<!-- hidden 隐藏的标签
+1、直接填上hidden的熟悉
+2、hidden="{{ture}}"
+什么场景下使用wx：if 和hidden
+1、当标签不是频繁的切换的显示的时候，优先使用 wx:if 直接把标签从页面结构给移除掉了
+2、当标签需要频繁的切换显示的时候，优先使用hidden ，通过添加样式的方式来切换显示
+注意一点：hidden属性不要和样式display一起使用，因为display 会覆盖掉hidden
+ -->
+<view hidden class="" hover-class="none" hover-stop-propagation="false">
+我不显示
+</view>
+
+<view hidden="{{false}}" class="" hover-class="none" hover-stop-propagation="false">
+   我就要显示显示 
+</view>

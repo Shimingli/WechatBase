@@ -1,0 +1,12 @@
+<!--pages/demo05/demo05.wxml-->
+<!-- 
+
+    
+ -->
+<view class="" hover-class="none" hover-stop-propagation="false">
+    像素
+</view>
+
+<viewDemo>
+  rpx
+ </viewDemo>
