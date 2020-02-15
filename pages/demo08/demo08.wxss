@@ -1,0 +1,23 @@
+/* pages/demo08/demo08.wxss */
+.h-class{
+    color: red;
+}
+/* 
+在CSS的盒子模型中，有两个重要的选项
+box-sizing:content-box 和 box-sizing:border-box，
+content-box被称为正常盒子模型，
+border-box被称为怪异盒子模型
+border-box定义的盒子，
+不会随着padding和boder的加入而增大盒子的占用空间
+
+border 简写属性在一个声明设置所有的边框属性 
+ solid : 实线 dotted solid  (double :双线)  dashe
+*/
+
+image{
+    box-sizing: border-box;
+    border: 20px double red;
+    width: 300px;
+    height: 500px;
+
+}

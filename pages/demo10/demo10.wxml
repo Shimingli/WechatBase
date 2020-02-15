@@ -1,0 +1,31 @@
+<!--pages/demo10/demo10.wxml-->
+
+<!-- 
+swiper 容器
+swiper-item 轮播项
+swiper : width 是100%  height 是150px  image的默认：320*240
+swiper 如何适应图片的宽高
+autoplay:自动轮播  interval:时间默认是5s circular：循环轮播 indicator-dots:指示器
+ -->
+<swiper autoplay="{{true}}"  interval="1000" circular="{{true}}" indicator-dots="{{true}}" indicator-active-color="#ff4500" indicator-color="rgba(0, 0, 0, .3)">
+    
+    <swiper-item class="" item-id="">
+        <image src="https://gw.alicdn.com/tfs/TB1xv_6vBv0gK0jSZKbXXbK2FXa-380-320.png" />
+        
+       
+    </swiper-item>
+
+    <swiper-item class="" item-id="">
+         <image class="" src="https://gw.alicdn.com/bao/upload/TB1n5XVvrj1gK0jSZFuXXcrHpXa.jpg_Q75.jpg" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">
+             
+         </image>
+    </swiper-item>
+      
+      <swiper-item class="" item-id="">
+            <image class="" src="https://gw.alicdn.com/bao/upload/TB1ujCKvhD1gK0jSZFsXXbldVXa.jpg_Q75.jpg" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="" />
+           
+    
+      </swiper-item>
+        
+      
+</swiper>

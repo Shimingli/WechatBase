@@ -1,0 +1,21 @@
+/* pages/demo07/demo07.wxss */
+//  直接帮我生成一个wxss文件 
+// 定义一个less变量 
+@color:yellow;
+
+text{
+    // 使用变量 
+    color: @color;
+}
+view{
+    .view1{
+        color: red
+    }
+}
+
+// 导入 解决方案：少了 ； 少了 ；号呀 
+@import "../../stylexs/reset.less";
+// 这个是真的牛逼
+view{
+    color:@themeColor;
+}

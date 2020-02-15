@@ -1,1 +1,10 @@
 /* pages/demo07/demo07.wxss */
+text {
+  color: yellow;
+}
+view .view1 {
+  color: red;
+}
+view {
+  color: green;
+}

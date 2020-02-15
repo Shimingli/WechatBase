@@ -1,0 +1,28 @@
+<!-- pages/demo08/demo08.wxml -->
+<!-- 常见组件
+view ：hover-class 按下去颜色改变   hover-stop-propagation：指定是否阻止本节点的祖先节点出现点击态 -->
+<view hover-class="h-class" hover-stop-propagation="false">按我颜色变</view>
+<!-- text
+    文本标签  
+    只能嵌套 text 
+    长安文字可以复制（只有他有着功能） 
+    可以对空格 回车进行编码
+
+    1 selectable :长安复制
+    2 对文本内容进行解码 decode 
+    decode可以解析的有 &nbsp(空格); &lt;（小于符号） &gt; &amp; &apos; &ensp; &emsp; -->
+<text selectable="{{true}}" decode="{{true}}">哈哈&nbsp;123 &lt;</text>
+<!-- 图片 image
+小程序最多2m，最好把图片放在网上
+图片默认宽度 320 *240 
+
+mode 决定图片内容如何和图片做适配，就好像安卓一样 
+ scaleToFill 缩放模式，不保持纵横比缩放图片，使图片的宽高完全拉伸至填满 image 元素
+aspectFit: 缩放模式，保持纵横比缩放图片，使图片的长边能完全显示出来。也就是说，可以完整地将图片显示出来。
+
+小程序中的lazy-load 懒加载 ：就是出现在窗口的时候，图片开始来加载
+
+ lazy-load="false" 默认的是false 这个用处在，大量图的时候列表吧
+
+ -->
+<image class="" src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=4010395508,932047146&fm=26&gp=0.jpg" mode="scaleToFill" lazy-load="false" binderror="" bindload="" />
