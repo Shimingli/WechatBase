@@ -1,0 +1,29 @@
+<!--pages/demo11/demo11.wxml-->
+<!-- 
+导航组件  navigator (默认换行，块级元素)
+
+1、url 要跳转的页面  绝对和相对路径 
+2、target 要跳转到当前小程序 还是其他的小程序 在哪个目标上发生跳转，默认当前小程序 默认是self actions
+3、open-type 跳转的方式 
+   navigate 保留当前页面，跳转到引用内的页面，但是不能跳转tabbar 页面
+   redirect 关闭当前页面，跳转到引用内的某个页面，但是不嫩跳转到tabbar页面，其实就是灭有返回按钮了
+   switchTab 跳转到tabbar页面，关闭其他非tabbar的页面
+    reLaunch  关闭所有页面，打开引用内的某个页面
+ -->
+<navigator class="" target="" url="/pages/demo10/demo10" hover-class="navigator-hover" open-type="navigate">
+    轮播图页面1
+</navigator>
+
+<navigator class="" target="" url="/pages/demo10/demo10" hover-class="navigator-hover" open-type="navigate">
+    轮播图页面2
+</navigator>
+
+<navigator class="" target="" url="/pages/index/index" hover-class="navigator-hover" open-type="navigate">
+    跳转到tabbar 页面
+</navigator>
+<navigator  class="" target="" url="/pages/index/index" hover-class="navigator-hover" open-type="switchTab">
+     switchTab 跳转到tabbar页面，关闭其他的页面
+</navigator>
+<navigator  class="" target="" url="/pages/index/index" hover-class="navigator-hover" open-type="reLaunch">
+      reLaunch  关闭所有页面，打开引用内的某个页面
+</navigator>

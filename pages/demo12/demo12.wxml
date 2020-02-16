@@ -1,0 +1,21 @@
+<!--pages/demo12/demo12.wxml-->
+<!-- 
+rick-text 富文本标签
+nodes 属性来实现 
+  接受标签字符串
+
+
+ -->
+
+ <rich-text class="" nodes="{{html}}">
+     
+ </rich-text>
+
+ <rich-text class="" nodes="{{htmlContent}}">
+     
+ </rich-text>
+
+
+ <rich-text class="" nodes="{{htmlArr}}">
+     
+ </rich-text>

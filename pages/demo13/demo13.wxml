@@ -1,0 +1,47 @@
+<!--pages/demo13/demo13.wxml-->
+<!-- 
+
+button ：原有颜色 
+外观属性 
+size：大小  type :按钮颜色  plain ：按钮是否镂空，背景色透明
+loading ：名称前是否带 loading 图标
+
+ -->
+ <button size="mini">xiao按钮</button>
+ <button size="default">默认按钮</button>
+
+ <button size="default" type="default">默认颜色按钮</button>
+<button size="default" type="primary">白色按钮</button>
+<button size="default" type="warn">红色按钮</button>
+<button size="default" type="warn" plain="{{true}}"> plain ：按钮是否镂空，背景色透明</button>
+ <button size="default" loading="{{true}}">默认按钮</button>
+
+<!-- 
+    button 开发的能力 
+    open-type: 
+    contact 打开客户对话，需要在后台进行配置才可以
+    share 转发小程序到微信朋友中 ，不能分享朋友圈
+    getPhoneNumber 获取当前用户的电话号码 ，企业账号才有权限
+       1、绑定事件：bindgetphonenumber 
+       2、事件回调中，通过参数来获取信息  
+       3、信息已经加密，需要搭建后台服务器，在后台服务器中进行解析   
+    getUserInfo 获取当前的个人信息
+       1、获取用户信息，可以从bindgetuserinfo回调中获取到用户信息
+       2。直接获取
+    launchApp 在小程序中直接打开app
+       1、需要app中某个连接打开小程序，
+       2、在通过小程序打开这个app 
+    openSetting 打开小程序内置的授权页面
+       1、授权出现用户曾经点击过得权限
+    feedback 打开小程序的意见反馈
+       1、只能通过手机
+
+ -->
+ <button open-type="contact">打开客服会话</button>
+<button open-type="share">转发小程序到微信朋友中</button>
+<button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">获取当前用户的电话号码</button>
+<button open-type="getUserInfo" bindgetuserinfo="getUserInfo" >获取当前的个人信息</button>
+<button open-type="launchApp">在小程序中直接打开app</button>
+<button open-type="openSetting">打开小程序内置的授权页面</button>
+<button open-type="feedback">打开小程序的意见反馈</button>
+
