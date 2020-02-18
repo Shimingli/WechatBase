@@ -1,0 +1,11 @@
+<!--pages/demo14/demo14.wxml-->
+<!-- 
+    icon 小程序的字体图标
+type="success|success_no_circle|info|warn|waiting|cancel|download|search|clear"
+ 
+ size 大小  color 颜色
+ -->
+
+ <icon class="" type="download" size="23" color="">
+     
+ </icon>

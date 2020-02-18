@@ -1,5 +1,10 @@
 {
   "pages": [
+    "pages/demo18/demo18",
+    "pages/demo17/demo17",
+    "pages/demo16/demo16",
+    "pages/demo15/demo15",
+    "pages/demo14/demo14",
     "pages/demo13/demo13",
     "pages/demo12/demo12",
     "pages/demo11/demo11",
@@ -43,6 +48,12 @@
       {
         "pagePath": "pages/mine/mine",
         "text": "我的",
+        "iconPath": "icon/icon-xx@2x.png",
+        "selectedIconPath": "icon/icon-xx@2x.png"
+      },
+      {
+        "pagePath": "pages/demo18/demo18",
+        "text": "demo18",
         "iconPath": "icon/icon-xx@2x.png",
         "selectedIconPath": "icon/icon-xx@2x.png"
       }

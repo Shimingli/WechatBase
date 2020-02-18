@@ -1,0 +1,30 @@
+<!--pages/demo17/demo17.wxml-->
+
+<!-- 
+1、父组件向子组件传递数据。是通过标签属性的方式来传递的
+aaa="123" 传递给子组件
+在子组件接受这个值 
+
+     
+2、子组件向父组件传递数据： this.triggerEvent("itemChange",{index})
+
+ -->
+<Tabs aaa="123" tabs="{{tabsDemo17}}" binditemChange="handelItemChange"></Tabs>
+
+<block wx:if="{{tabsDemo17[0].isActive}}" >
+    0
+</block>
+
+<block wx:elif="{{tabsDemo17[1].isActive}}" >
+    1
+</block>
+
+<block wx:elif="{{tabsDemo17[2].isActive}}" >
+    2
+</block>
+
+<block wx:else>
+    3
+</block>
+
+<view >父组件传递过来的 </view>

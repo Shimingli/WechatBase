@@ -1,0 +1,23 @@
+<!--pages/demo15/demo15.wxml-->
+<!-- 
+radio 单选框 
+  1、 radio和父元素 radio-group 一起使用
+  2、value 选中的单项框的值
+  3、处理函数handelChange
+  4、显示处理的值
+
+ -->
+
+ <radio-group bindchange="handelChange">
+     <radio color="red" class="" value="male" >
+         男
+     </radio>
+     <radio class="" value="female"  color="">
+        女
+     </radio>
+
+     <view class="" hover-class="none" hover-stop-propagation="false">
+         选中：{{gender}}
+     </view>
+
+ </radio-group>

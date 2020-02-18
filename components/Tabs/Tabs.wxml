@@ -1,0 +1,42 @@
+<!-- components/Tabs/Tabs.wxml -->
+<view >
+{{aaa}}
+</view>
+
+
+<view class="tabs">
+    <view class="tabs_title">
+        <!-- <view class="title_item active" >首页</view>
+        <view class="title_item">原创</view>
+        <view class="title_item">分类</view>
+        <view class="title_item">关于</view> -->
+
+<!-- 
+
+小程序获取节点绑定数据data-index的方法
+
+ -->
+       <view 
+       bindtap="handelTap"
+       data-index="{{index}}"
+
+       wx:for="{{tabs}}"
+       wx:key="id"
+       class="title_item {{item.isActive? 'active':''}}"
+
+       >
+           {{item.name}}
+       </view>
+         
+
+    </view>
+    <!-- <view class="tabs_content">内容</view> -->
+     
+     <!-- 
+
+         slot 标签 其实就是一个占位符
+         等到父组件调用子组件的时候，在传递过来标签，就会替换slot标签的位置
+      -->
+      <slot ></slot>
+
+</view>

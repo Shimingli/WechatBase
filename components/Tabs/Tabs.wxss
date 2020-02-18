@@ -1,0 +1,43 @@
+/* components/Tabs/Tabs.wxss */
+.tabs{
+
+}
+/* 
+display 属性规定元素应该生成的框的类型
+Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型提供最大的灵活性
+ flex-direction: column-reverse 方向查下质料
+ 写 padding ： p10rpx 
+ padding:10px 5px;
+上填充和下填充是 10px
+右填充和左填充是 5px 
+*/
+.tabs_title{
+  display: flex ;
+  padding: 10rpx 2rpx;
+ 
+}
+/* 
+justify-content 用于设置或检索弹性盒子元素在主轴（横轴）方向上的对齐方式
+justify-content属性定义了项目在主轴上的对齐方式
+align-items 属性定义flex子项在flex容器的当前行的侧轴（纵轴）方向上的对齐方式
+*/
+.title_item{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    /* 元素位于容器的中心 */
+    align-items: center;
+
+}
+
+.active{
+    color: red;
+    /*
+     border-bottom缩写属性设置一个声明中所有底部边框属性 
+    currentColor等于当前字体的颜色
+    */
+    border-bottom: 5rpx solid currentColor;
+}
+.tabs_content{
+
+}

@@ -1,6 +1,11 @@
 //app.js
 App({
+  // 第一次启动触发 
   onLaunch: function () {
+    // 获取用户的个人信息，就可以在使用
+    console.log("onLaunch")
+
+
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -32,8 +37,40 @@ App({
         }
       }
     })
+
+      //js的方式来跳转 不能触犯onPageNotFound
+    //  wx.navigateTo({
+    //      url:'/2/2/2'   
+    //  });
   },
   globalData: {
     userInfo: null
+  },
+  // 引用被用户看到 对应用的数据或者页面效果 重置
+  onShow(){
+     console.log("onShow")
+   
+  },
+  //应用被隐藏  暂停或者是清除定时器
+  onHide(){
+     console.log("onHide")
+  },
+  //应用代码发生了错误,就会触发
+  // 应用发生代码报错的时候，手机用户的错误信息，通过异步请求 将错误的信息发送到后台去
+  onError(err){
+    console.log("onError");
+    console.log(err)
+  },
+  //页面找不到，就会触发这个
+  // 如果页面不存在的话 通过js的方式来重新跳转页面 重新跳转到第二个首页
+  onPageNotFound(){
+    console.log("onPageNotFound");
+    //不能跳转到tabber页面 
+    wx.navigateTo({
+      url: '/pages/demo10/demo10'
+    });
+      
   }
+
+
 })

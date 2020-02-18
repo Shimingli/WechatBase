@@ -1,0 +1,16 @@
+<!--pages/demo16/demo16.wxml-->
+<view class="" hover-class="none" hover-stop-propagation="false">
+    
+  <checkbox-group bindchange="handelItemChange">
+      <checkbox  value="{{item.value}}" wx:for="{{lists}}" wx:key="id">
+       {{item.name}}
+      
+      
+      </checkbox>
+  </checkbox-group>
+    
+<view class="" hover-class="none" hover-stop-propagation="false">
+    选中的 : {{checkedList}}
+</view>
+
+</view>
